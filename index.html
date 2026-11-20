@@ -71,9 +71,9 @@ const ABOUT=[['IROZOME','A personal archive of colors.'],['Color & Culture','色
 */
 :root {
  --text-neutral: #606060; /* Unified gray text HEX */
- --font-body: "Helvetica Neue", Arial, sans-serif;
- --font-title: "Helvetica Neue", Arial, sans-serif;
- --font-label: "Helvetica Neue", Arial, sans-serif;
+ --font-body: "Andale Mono", monospace;
+ --font-title: "Andale Mono", monospace;
+ --font-label: "Andale Mono", monospace;
  --text-body:var(--text-neutral);
  --text-name: #ff66e6;
  --text-muted:var(--text-neutral);
@@ -252,6 +252,11 @@ h1,h2{font-family:var(--font-title)!important}.small,.location,nav{font-family:v
 
 #name{color:var(--text-name)}body{color:var(--text-body)}#status{color:var(--text-muted)}.field{max-width:100%}#homeImage{max-width:100%}
 
+/* Preserve the softer typeface for tab links, profile details, and people lists. */
+nav .link{font-family:"Helvetica Neue",Arial,sans-serif}
+.hero h1,.hero .small,.hero #location,#name,#location,.friends,.friend,.friend small,#requests,.request-row,.request-name,.request-actions{font-family:"Helvetica Neue",Arial,sans-serif}
+.hero h1{font-family:"Helvetica Neue",Arial,sans-serif!important}
+
 /* EDIT APPEARANCE: fonts, sizes, colors. Existing detailed --text-* presets above remain active. */
 :root{--action-font:"Andale Mono", monospace;--action-size:12px;--action-color:var(--text-neutral);--landing-font:"Andale Mono", monospace;--landing-size:clamp(36px,6vw,72px);--landing-color:var(--text-neutral);--danger-color:#b44747}
 [hidden]{display:none!important}#landing{padding:80px 0;font-family:"Andale Mono", monospace}#landing h1{font-family:var(--landing-font);font-size:var(--landing-size);color:var(--landing-color)}#requests button{font-family:var(--action-font);font-size:var(--action-size);color:var(--action-color);margin:8px;padding:5px 8px}#requests>div{padding:12px 0}.danger{color:var(--danger-color)}
@@ -278,9 +283,9 @@ h1,h2{font-family:var(--font-title)!important}.small,.location,nav{font-family:v
 <button class="brand" id="brand" aria-label="irozo.me home" style="color:var(--text-body);font-family:var(--font-body)">
 <canvas id="logoCanvas" width="540" height="540" aria-hidden="true" style="width:120px;height:120px;image-rendering:pixelated"></canvas><span id="logoFallback">irozo.me</span><canvas class="graphic-logo" width="48" height="64" aria-hidden="true"></canvas></button>
 <nav>
-<button class="link active" id="home" style="color:var(--text-body);font-family:var(--font-body)">my colors</button>
-<button class="link" id="worldNav" style="color:var(--text-body);font-family:var(--font-body)">little worlds</button>
-<button class="link" id="aboutNav" style="color:var(--text-body);font-family:var(--font-label)">about</button></nav>
+<button class="link active" id="home" style="color:var(--text-body);font-family:'Helvetica Neue',Arial,sans-serif">my colors</button>
+<button class="link" id="worldNav" style="color:var(--text-body);font-family:'Helvetica Neue',Arial,sans-serif">little worlds</button>
+<button class="link" id="aboutNav" style="color:var(--text-body);font-family:'Helvetica Neue',Arial,sans-serif">about</button></nav>
 </header>
 <main><div class="controls"><button class="solid" id="auth">Create my space</button><button class="link" id="friendsButton">Friends & requests</button></div><p id="status" role="status">Connecting…</p>
 <section id="landing" hidden><h1>Memories,<br>in colors.</h1><p>A colorful personal space.</p><button class="solid" id="start">Create my space</button> <button class="link" id="browse">Browse spaces</button></section><section id="profile" hidden><div class="hero" id="hero"><canvas id="trail"></canvas><div class="small">hello, it's</div><h1><span id="name"></span>,<br>in colors.</h1><p id="location"></p><p class="subtitle" id="profileBio"></p></div><button class="link" id="editProfile">Edit profile</button><button class="link" id="friendAction">Add friend</button><div class="home-image"><img id="homeImage" alt="Public home image" hidden></div><div class="cover-controls"><button class="link" id="chooseCover">Choose home image</button><button class="link" id="removeCover">Remove home image</button></div><div class="controls"><div class="toggle"><button id="owner">My memories</button><button id="visitor">Preview</button></div></div><label class="form-label">Month <input type="month" id="period"></label><div id="board" class="board"></div><h2>This month's palette</h2><div id="palette" class="palette"></div></section>
