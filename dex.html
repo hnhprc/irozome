@@ -215,14 +215,15 @@ nav .link{font-family:"Andale Mono",monospace}
 .cover-controls{margin-bottom:28px}
 
 /* Red section titles and pink landing heading */
-#profile h2,#worlds h2,.about-content h2,.about-content p{color:#ff66e6}
+#profile h2,#worlds h2,.about-content h2{color:#ff66e6}
+.about-content p{color:var(--text-body)}
 #profile h2,#worlds h2{font-size:18px}
 #search{font-family:"Helvetica Neue",Arial,sans-serif}
 :root{--landing-color:#ff66e6}
 
 /* EDIT APPEARANCE: fonts, sizes, colors. Existing detailed --text-* presets above remain active. */
 :root{--action-font:"Andale Mono", monospace;--action-size:12px;--action-color:#696956;--landing-font:"Andale Mono", monospace;--landing-size:clamp(36px,6vw,72px);--landing-color:#ff66e6;--danger-color:#b44747}
-[hidden]{display:none!important}#landing{padding:80px 0;font-family:"Andale Mono", monospace}#landing h1{font-family:var(--landing-font);font-size:var(--landing-size);color:var(--landing-color)}#requests button{font-family:var(--action-font);font-size:var(--action-size);color:var(--action-color);margin:8px;padding:5px 8px}#requests>div{padding:12px 0}.danger{color:var(--danger-color)}
+[hidden]{display:none!important}#landing{padding:80px 0;font-family:"Andale Mono", monospace}#landing h1{font-family:"Helvetica Neue",Arial,sans-serif;font-size:var(--landing-size);color:var(--landing-color)}#requests button{font-family:var(--action-font);font-size:var(--action-size);color:var(--action-color);margin:8px;padding:5px 8px}#requests>div{padding:12px 0}.danger{color:var(--danger-color)}
 </style><div id="stardust" aria-hidden="true"></div>
 <header>
 <button class="brand" id="brand" aria-label="irozo.me home" style="color:var(--text-body);font-family:var(--font-body)">
